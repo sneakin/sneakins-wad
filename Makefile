@@ -10,12 +10,8 @@ release/sneakins-wad:
 	mkdir -p $@
 release/sneakins-wad/README.md: README.md ./release/sneakins-wad
 	cp $< $@
-release/sneakins-wad/README.html: README.md ./release/sneakins-wad ./release/sneakins-wad/images/screenshots/base1-00.png
+release/sneakins-wad/README.html: README.md ./release/sneakins-wad
 	markdown_py $< > $@
-./release/sneakins-wad/images/screenshots:
-	mkdir -p $@
-./release/sneakins-wad/images/screenshots/base1-00.png: ./images/screenshots/base1-00.png ./release/sneakins-wad/images/screenshots
-	cp $< $@
 release/sneakins-wad/sneakin.wad: sneakin.wad ./release/sneakins-wad
 	cp $< $@
 
