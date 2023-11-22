@@ -39,7 +39,7 @@ sneakin.wad: ./build build/full_wadinfo.txt
 		ln -nsf build/$@ ../$@
 
 sneakin-maps.wad: maps_wadinfo.txt $(shellglob,levels/*)
-	deutex -build maps_wadinfo.txt $@
+	deutex -overwrite -build maps_wadinfo.txt $@
 
 textures/sneakin-tex.wad: textures/wadinfo.txt textures/textures/texture2.txt
 	make -C textures
