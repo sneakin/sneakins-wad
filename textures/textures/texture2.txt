@@ -1,0 +1,69 @@
+CBLACK			64	64
+*	CBLACK64	0	0
+CWHITE			64	64
+*	CWHITE64	0	0
+CGRAY			64	64
+*	CGRAY64		0	0
+CRED			64	64
+*	CRED64		0	0
+CGREEN			64	64
+*	CGREEN64	0	0
+CBLUE			64	64
+*	CBLUE64		0	0
+CMAGEN			64	64
+*	CMAGEN64	0	0
+GRIDMAG6		64	64
+*	GRIDMAG6	0	0
+CHECKER8		64	32
+*	CBLACK8		0	0
+*	CWHITE8		8	0
+*	CBLACK8		16	0
+*	CWHITE8		24	0
+*	CBLACK8		32	0
+*	CWHITE8		40	0
+*	CBLACK8		48	0
+*	CWHITE8		56	0
+*	CWHITE8		0	8
+*	CBLACK8		8	8
+*	CWHITE8		16	8
+*	CBLACK8		24	8
+*	CWHITE8		32	8
+*	CBLACK8		40	8
+*	CWHITE8		48	8
+*	CBLACK8		56	8
+*	CBLACK8		0	16
+*	CWHITE8		8	16
+*	CBLACK8		16	16
+*	CWHITE8		24	16
+*	CBLACK8		32	16
+*	CWHITE8		40	16
+*	CBLACK8		48	16
+*	CWHITE8		56	16
+*	CWHITE8		0	24
+*	CBLACK8		8	24
+*	CWHITE8		16	24
+*	CBLACK8		24	24
+*	CWHITE8		32	24
+*	CBLACK8		40	24
+*	CWHITE8		48	24
+*	CBLACK8		56	24
+
+CHECKER64		128	128
+*	CBLACK64	0	0
+*	CWHITE64	64	0
+*	CWHITE64	0	64
+*	CBLACK64	64	64
+
+SNRAILS2                64      25
+*       RW45_1          0       0
+SNRAILS3                64      32
+*       RW45_1          0       0
+SW1STARG1                  64      128
+*       SW12_1          0       0
+*       SW12_2          32      0
+*       SW1S0           16      72
+SW2STARG1                  64      128
+*       SW12_1          0       0
+*       SW12_2          32      0
+*       SW1S1           16      72
+
