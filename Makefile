@@ -5,10 +5,10 @@ clean:
 	make -C textures clean
 
 ./build:
-	mkdir build
+	mkdir -p build
 
 full_wadinfo.txt: maps_wadinfo.txt textures/wadinfo.txt
-	cat $< > $@
+	cat $^ > $@
 	
 sneakin.wad: ./build full_wadinfo.txt
 	cd build && \
