@@ -27,17 +27,17 @@ release/sneakins-wad.zip: release/sneakins-wad/README.md release/sneakins-wad/RE
 build/full_wadinfo.txt: maps_wadinfo.txt textures/wadinfo.txt
 	cat $^ > $@
 	
-sneakin.wad: ./build build/full_wadinfo.txt $(wildcard levels/*.wad textures/*/*.png textures/textures/*.txt)
+sneakin.wad: ./build build/full_wadinfo.txt $(wildcard levels/*.wad textures/*/*.png textures/*/*.txt textures/*/*.lmp)
 	cd build && \
 		cp -r ../levels . && \
-		cp -r ../textures/flats ../textures/patches ../textures/textures . && \
+		cp -r ../textures/flats ../textures/patches ../textures/textures ../textures/lumps . && \
 		deutex -overwrite -build full_wadinfo.txt $@ && \
 		ln -nsf build/$@ ../$@
 
 sneakin-maps.wad: maps_wadinfo.txt $(wildcard levels/*)
 	deutex -overwrite -build maps_wadinfo.txt $@
 
-textures/sneakin-tex.wad: textures/wadinfo.txt textures/textures/texture2.txt $(wildcard textures/*/*.png textures/*/*.txt)
+textures/sneakin-tex.wad: textures/wadinfo.txt textures/textures/texture2.txt $(wildcard textures/*/*.png textures/*/*.txt textures/*/*.lmp)
 	make -C textures
 
 sneakin-tex.wad: textures/sneakin-tex.wad

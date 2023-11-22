@@ -12,8 +12,24 @@ CBLUE			64	64
 *	CBLUE64		0	0
 CMAGEN			64	64
 *	CMAGEN64	0	0
+CYELLOW			64	64
+*	CYELLO64	0	0
+
 GRIDMAG6		64	64
 *	GRIDMAG6	0	0
+GRIDBLK6		64	64
+*	GRIDBLK6	0	0
+GRIDWHT6		64	64
+*	GRIDWHT6	0	0
+GRIDRED6		64	64
+*	GRIDRED	0	0
+GRIDGRN6		64	64
+*	GRIDGRN	0	0
+GRIDBLU6		64	64
+*	GRIDBLUE	0	0
+GRIDYEL6		64	64
+*	GRIDYELL	0	0
+
 CHECKER8		64	32
 *	CBLACK8		0	0
 *	CWHITE8		8	0
@@ -48,7 +64,13 @@ CHECKER8		64	32
 *	CWHITE8		48	24
 *	CBLACK8		56	24
 
-CHECKER64		128	128
+CHECKER64		64	64
+*	CBLACK64	0	0
+*	CWHITE64	32	0
+*	CWHITE64	0	32
+*	CBLACK64	32	32
+
+CHECKR128		128	128
 *	CBLACK64	0	0
 *	CWHITE64	64	0
 *	CWHITE64	0	64
@@ -58,12 +80,21 @@ SNRAILS2                64      25
 *       RW45_1          0       0
 SNRAILS3                64      32
 *       RW45_1          0       0
-SW1STARG1                  64      128
+
+SW1STARG                  64      128
 *       SW12_1          0       0
 *       SW12_2          32      0
 *       SW1S0           16      72
-SW2STARG1                  64      128
+SW2STARG                  64      128
 *       SW12_1          0       0
 *       SW12_2          32      0
 *       SW1S1           16      72
+SW1CBLAC                  64      128
+*       CBLACK64          0       0
+*       CBLACK64          0      64
+*       SW1S0   	  16      72
+SW2CBLAC                  64      128
+*       CBLACK64          0       0
+*       CBLACK64          0      64
+*       SW1S1  	         16      72
 
