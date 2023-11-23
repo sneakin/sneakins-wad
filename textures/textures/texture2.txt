@@ -76,6 +76,14 @@ CHECKR128		128	128
 *	CWHITE64	0	64
 *	CBLACK64	64	64
 
+MIDBAR48    		64	48
+*	RW43_1      	0	-24
+MIDBAR64    		64	64
+*	RW43_1      	0	-24
+MIDBAR96    		64	96
+*	RW43_1      	0	-16
+MIDSPA24    		64	32
+*	RW47_1      	0	-8
 SNRAILS2                64      25
 *       RW45_1          0       0
 SNRAILS3                64      32
