@@ -9,7 +9,7 @@ REL_WAD=release/sneakins-wad/sneakin.wad
 release: release/sneakins-wad.tgz release/sneakins-wad.zip
 
 release/sneakins-wad:
-	rm -r $@ && mkdir -p $@
+	rm -rf $@ && mkdir -p $@
 release/sneakins-wad/README.md: README.md ./release/sneakins-wad release/sneakins-wad/sneakin.wad
 	cp $< $@
 	echo -e "\n\n# Hashes\n\n* SHA256: $$(sha256sum $(REL_WAD) | cut -f 1 -d ' ')\n* SHA512: $$(sha512sum $(REL_WAD) | cut -f 1 -d ' ')\n" >> $@
