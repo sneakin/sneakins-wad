@@ -1,3 +1,11 @@
+<% def grid2d(w, h, sw, sh = sw)
+     (0..h).step(sh) do |y|
+       (0..w).step(sw) do |x|
+         yield(x, y)
+       end
+     end
+   end
+%>
 <% %w{ BLACK WHITE GRAY RED GREEN BLUE MAGEN YELLO }.each do |color| %>
 C<%= color %>			64	64
 *	C<%= color %>64	0	0
@@ -22,23 +30,18 @@ GRID<%= sh %>6		64	64
 *	GRID<%= sh %>6	0	0
 
 GRID<%= sh %>3		64	64
-*	GRID<%= sh %>6	0	0
-*	GRID<%= sh %>6	32	0
-*	GRID<%= sh %>6	0	32
-*	GRID<%= sh %>6	32	32
+<% grid2d(64, 64, 32) do |x, y| %>
+*	GRID<%= sh %>6	<%= x %>	<%= y %>
+<% end %>
 
 GRID<%= sh %>1		64	64
-<% (0..64).step(16) do |y| %>
-  <% (0..64).step(16) do |x| %>
+<% grid2d(64, 64, 16) do |x, y| %>
 *	GRID<%= sh %>6	<%= x %>	<%= y %>
-  <% end %>
 <% end %>
 
 GRID<%= sh %>8		64	64
-<% (0..64).step(8) do |y| %>
-  <% (0..64).step(8) do |x| %>
+<% grid2d(64, 64, 8) do |x, y| %>
 *	GRID<%= sh %>6	<%= x %>	<%= y %>
-  <% end %>
 <% end %>
 
 SW1G<%= sh %>                  64      128
@@ -51,39 +54,14 @@ SW2G<%= color[0,4] %>                  64      128
 *       SW1S1  	         16      72
 <% end %>
 
-CHECKER8		64	32
-*	CBLACK8		0	0
-*	CWHITE8		8	0
-*	CBLACK8		16	0
-*	CWHITE8		24	0
-*	CBLACK8		32	0
-*	CWHITE8		40	0
-*	CBLACK8		48	0
-*	CWHITE8		56	0
-*	CWHITE8		0	8
-*	CBLACK8		8	8
-*	CWHITE8		16	8
-*	CBLACK8		24	8
-*	CWHITE8		32	8
-*	CBLACK8		40	8
-*	CWHITE8		48	8
-*	CBLACK8		56	8
-*	CBLACK8		0	16
-*	CWHITE8		8	16
-*	CBLACK8		16	16
-*	CWHITE8		24	16
-*	CBLACK8		32	16
-*	CWHITE8		40	16
-*	CBLACK8		48	16
-*	CWHITE8		56	16
-*	CWHITE8		0	24
-*	CBLACK8		8	24
-*	CWHITE8		16	24
-*	CBLACK8		24	24
-*	CWHITE8		32	24
-*	CBLACK8		40	24
-*	CWHITE8		48	24
-*	CBLACK8		56	24
+CHECKER8		64	64
+<% grid2d(64, 64, 8) do |x, y| %>
+    <% if ((y/8).odd? && (x/8).odd?) || ((y/8).even? && (x/8).even?) %>
+*	CBLACK8	<%= x %>	<%= y %>
+    <% else %>
+*	CWHITE8	<%= x %>	<%= y %>
+    <% end %>
+<% end %>
 
 CHECKER64		64	64
 *	CBLACK64	0	0
