@@ -3,7 +3,7 @@ SWITCH SW1C<%= color[0,4] %>
 on sound switches/normbutn
 pic SW2C<%= color[0,4] %> tics 0
 off sound switches/normbutn
-pic SW2C<%= color[0,4] %> tics 0
+pic SW1C<%= color[0,4] %> tics 0
 
 SWITCH SW2C<%= color[0,4] %>
 on sound switches/normbutn
@@ -18,13 +18,25 @@ SWITCH SW1G<%= sh %>
 on sound switches/normbutn
 pic SW2G<%= sh %> tics 0
 off sound switches/normbutn
-pic SW2G<%= sh %> tics 0
+pic SW1G<%= sh %> tics 0
 
 SWITCH SW2G<%= sh %>
 on sound switches/normbutn
 pic SW1G<%= sh %> tics 0
 off sound switches/normbutn
 pic SW2G<%= sh %> tics 0
+
+SWITCH TGT<%= sh %>0
+on sound switches/normbutn
+pic TGT<%= sh %>1 tics 0
+off sound switches/normbutn
+pic TGT<%= sh %>0 tics 0
+
+SWITCH TGT<%= sh %>1
+on sound switches/normbutn
+pic TGT<%= sh %>0 tics 0
+off sound switches/normbutn
+pic TGT<%= sh %>1 tics 0
 <% end %>
 
 SWITCH SW1STARG
