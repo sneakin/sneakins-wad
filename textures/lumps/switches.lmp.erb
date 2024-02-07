@@ -1,0 +1,12 @@
+<% # See https://prboom.sourceforge.net/editing/reference-6.html
+ def sw(off, on)
+  # 9 bytes each for null-terminated textures for off and on
+  [ off[0,8], on[0,8], 3 ].pack('Z9Z9S')
+end -%>
+<% %w{ BLACK WHITE GRAY RED GREEN BLUE MAGEN YELLO }.each do |color| -%>
+<%= sw("SW1C#{color[0,4]}", "SW2C#{color[0,4]}") -%>
+<% end -%>
+<% %w{ BLK WHT RED YELL GRN BLUE MAG }.each do |color| -%>
+<%= sw("SW1G#{color[0,3]}", "SW2G#{color[0,3]}") -%>
+<%= sw("TGT#{color[0,3]}0", "TGT#{color[0,3]}1") -%>
+<% end -%>

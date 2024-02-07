@@ -6,5 +6,6 @@ release/*
 sneakin*.wad
 textures/*.wad
 tmp/*
-textures/lumps/animdefs.lmp
+textures/lumps/*.lmp
 textures/textures/texture2.txt
+textures/wadinfo.txt

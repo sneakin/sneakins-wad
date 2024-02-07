@@ -30,7 +30,7 @@ release/sneakins-wad.zip: release/sneakins-wad/README.md release/sneakins-wad/RE
 build/full_wadinfo.txt: maps_wadinfo.txt textures/wadinfo.txt
 	cat $^ > $@
 	
-sneakin.wad: ./build build/full_wadinfo.txt $(wildcard levels/*.wad textures/*/*.png textures/*/*.txt textures/*/*.lmp)
+sneakin.wad: ./build build/full_wadinfo.txt sneakin-tex.wad $(wildcard levels/*.wad)
 	cd build && \
 		cp -r ../levels . && \
 		cp -r ../textures/flats ../textures/patches ../textures/textures ../textures/lumps . && \
@@ -42,7 +42,7 @@ sneakin-maps.wad: maps_wadinfo.txt $(wildcard levels/*)
 
 textures/wadinfo.txt: textures/wadinfo.txt.erb
 	make -C textures
-textures/sneakin-tex.wad: textures/wadinfo.txt textures/textures/texture2.txt $(wildcard textures/*/*.png textures/*/*.txt textures/*/*.lmp)
+textures/sneakin-tex.wad: textures/wadinfo.txt textures/textures/texture2.txt $(wildcard textures/*/*.png textures/*/*.txt textures/*/*.lmp textures/*/*.erb)
 	make -C textures
 
 sneakin-tex.wad: textures/sneakin-tex.wad
