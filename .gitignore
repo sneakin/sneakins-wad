@@ -1,7 +1,10 @@
 *~
 #*
+.#*
 build/*
 release/*
 sneakin*.wad
 textures/*.wad
 tmp/*
+textures/lumps/animdefs.lmp
+textures/textures/texture2.txt

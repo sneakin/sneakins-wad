@@ -1,0 +1,15 @@
+[lumps]
+ANIMDEFS
+
+[texture2]
+TEXTURE2
+
+[patches]
+<% Dir.glob('patches/*').each do |patch| -%>
+<%= File.basename(patch).gsub(File.extname(patch), '').upcase %>
+<% end -%>
+
+[flats]
+<% Dir.glob('flats/*').each do |patch| -%>
+<%= File.basename(patch).gsub(File.extname(patch), '').upcase %>
+<% end -%>

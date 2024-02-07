@@ -5,8 +5,8 @@
        end
      end
    end
-%>
-<% %w{ BLACK WHITE GRAY RED GREEN BLUE MAGEN YELLO }.each do |color| %>
+-%>
+<% %w{ BLACK WHITE GRAY RED GREEN BLUE MAGEN YELLO }.each do |color| -%>
 C<%= color %>			64	64
 *	C<%= color %>64	0	0
 
@@ -18,9 +18,9 @@ SW2C<%= color[0,4] %>                  64      128
 *       C<%= color %>64          0       0
 *       C<%= color %>64          0      64
 *       SW1S1  	         16      72
-<% end %>
+<% end -%>
 
-<% %w{ BLK WHT RED YELL GRN BLUE MAG }.each do |color| %>
+<% %w{ BLK WHT RED YELL GRN BLUE MAG }.each do |color| -%>
 <% sh = color[0,3] %>
 GRID<%= sh %>T		64	128
 *	GRID<%= sh[0,3] %>6	0	0
@@ -30,19 +30,19 @@ GRID<%= sh %>6		64	64
 *	GRID<%= sh %>6	0	0
 
 GRID<%= sh %>3		64	64
-<% grid2d(64, 64, 32) do |x, y| %>
+<% grid2d(64, 64, 32) do |x, y| -%>
 *	GRID<%= sh %>6	<%= x %>	<%= y %>
-<% end %>
+<% end -%>
 
 GRID<%= sh %>1		64	64
-<% grid2d(64, 64, 16) do |x, y| %>
+<% grid2d(64, 64, 16) do |x, y| -%>
 *	GRID<%= sh %>6	<%= x %>	<%= y %>
-<% end %>
+<% end -%>
 
 GRID<%= sh %>8		64	64
-<% grid2d(64, 64, 8) do |x, y| %>
+<% grid2d(64, 64, 8) do |x, y| -%>
 *	GRID<%= sh %>6	<%= x %>	<%= y %>
-<% end %>
+<% end -%>
 
 SW1G<%= sh %>                  64      128
 *       GRID<%= sh %>6          0       0
@@ -58,16 +58,16 @@ TGT<%= sh %>0		64	64
 TGT<%= sh %>1		64	64
 *       TGT<%= sh %>1          0       0
 
-<% end %>
+<% end -%>
 
 CHECKER8		64	64
-<% grid2d(64, 64, 8) do |x, y| %>
-    <% if ((y/8).odd? && (x/8).odd?) || ((y/8).even? && (x/8).even?) %>
+<% grid2d(64, 64, 8) do |x, y| -%>
+    <% if ((y/8).odd? && (x/8).odd?) || ((y/8).even? && (x/8).even?) -%>
 *	CBLACK8	<%= x %>	<%= y %>
-    <% else %>
+    <% else -%>
 *	CWHITE8	<%= x %>	<%= y %>
-    <% end %>
-<% end %>
+    <% end -%>
+<% end -%>
 
 CHECKER64		64	64
 *	CBLACK64	0	0

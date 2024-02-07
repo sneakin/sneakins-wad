@@ -40,6 +40,8 @@ sneakin.wad: ./build build/full_wadinfo.txt $(wildcard levels/*.wad textures/*/*
 sneakin-maps.wad: maps_wadinfo.txt $(wildcard levels/*)
 	deutex -overwrite -build maps_wadinfo.txt $@
 
+textures/wadinfo.txt: textures/wadinfo.txt.erb
+	make -C textures
 textures/sneakin-tex.wad: textures/wadinfo.txt textures/textures/texture2.txt $(wildcard textures/*/*.png textures/*/*.txt textures/*/*.lmp)
 	make -C textures
 

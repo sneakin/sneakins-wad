@@ -1,4 +1,4 @@
-<% %w{ BLACK WHITE GRAY RED GREEN BLUE MAGEN YELLO }.each do |color| %>
+<% %w{ BLACK WHITE GRAY RED GREEN BLUE MAGEN YELLO }.each do |color| -%>
 SWITCH SW1C<%= color[0,4] %>
 on sound switches/normbutn
 pic SW2C<%= color[0,4] %> tics 0
@@ -10,9 +10,9 @@ on sound switches/normbutn
 pic SW1C<%= color[0,4] %> tics 0
 off sound switches/normbutn
 pic SW2C<%= color[0,4] %> tics 0
-<% end %>
+<% end -%>
 
-<% %w{ BLK WHT RED YELL GRN BLUE MAG }.each do |color| %>
+<% %w{ BLK WHT RED YELL GRN BLUE MAG }.each do |color| -%>
 <% sh = color[0,3] %>
 SWITCH SW1G<%= sh %>
 on sound switches/normbutn
@@ -37,7 +37,7 @@ on sound switches/normbutn
 pic TGT<%= sh %>0 tics 0
 off sound switches/normbutn
 pic TGT<%= sh %>1 tics 0
-<% end %>
+<% end -%>
 
 SWITCH SW1STARG
 on sound switches/normbutn
